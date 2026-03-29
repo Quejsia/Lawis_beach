@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lawis Beach ⛱️</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;600&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SPLASH SCREEN -->
+<div id="splash">
+  <div class="splash-logo">
+    <span class="beach-icon">⛱️</span>
+    <h1>Lawis Beach</h1>
+    <p>Paradise Awaits You</p>
+    <div class="splash-progress">
+      <div class="splash-bar"></div>
+    </div>
+  </div>
+  <div class="splash-waves">
+    <div class="splash-wave"></div>
+    <div class="splash-wave"></div>
+    <div class="splash-wave"></div>
+  </div>
+</div>
+
+<!-- MAIN SITE -->
+<div id="site">
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">Lawis ⛱️</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" onclick="closeNav()">About</a></li>
+    <li><a href="#gallery" onclick="closeNav()">Gallery</a></li>
+    <li><a href="#features" onclick="closeNav()">Experience</a></li>
+    <li><a href="#testimonials" onclick="closeNav()">Reviews</a></li>
+    <li><a href="#" class="nav-cta" id="openAuth" onclick="closeNav()">Sign In</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-slideshow">
+    <div class="hero-slide active" style="background-image:url('images/beach4.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/beach5.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/beach1.jpg')"></div>
+  </div>
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <span class="hero-tag">Welcome to Paradise</span>
+    <h1 class="hero-title">Lawis Beach</h1>
+    <p class="hero-subtitle">Where the sea meets serenity</p>
+    <div class="hero-btns">
+      <a href="#gallery" class="btn-primary">Explore Gallery</a>
+      <a href="#" class="btn-secondary" id="openAuth2">Join the Community</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <span class="section-label">Our Story</span>
+      <h2 class="section-title">A hidden gem on the <em>Philippine coast</em></h2>
+      <p>Lawis Beach is a pristine coastal escape blessed with crystal-clear waters, golden shores, and breathtaking sunsets that paint the sky in hues of amber and crimson every evening.</p>
+      <p>Nestled away from the bustle of city life, Lawis Beach offers an authentic slice of island living — from traditional bancas gliding across the bay to the warm smiles of locals who call this place home.</p>
+      <div class="about-stats">
+        <div class="stat"><span class="stat-num">365</span><span class="stat-label">Days of Sun</span></div>
+        <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Memories Made</span></div>
+        <div class="stat"><span class="stat-num">1</span><span class="stat-label">of a Kind View</span></div>
+        <div class="stat"><span class="stat-num">★4.9</span><span class="stat-label">Visitor Rating</span></div>
+      </div>
+    </div>
+    <div class="about-img-frame reveal">
+      <img src="images/beach4.jpg" alt="Lawis Beach sunset">
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-header reveal">
+    <span class="section-label">Gallery</span>
+    <h2 class="section-title">Moments captured <em>by the shore</em></h2>
+    <p class="gallery-desc">Explore our collection — and share your own Lawis memories below.</p>
+  </div>
+  <div class="gallery-grid reveal" id="mainGallery">
+    <div class="gallery-item" data-idx="0">
+      <img src="images/beach1.jpg" alt="Beach hut view" loading="lazy">
+      <div class="gallery-item-overlay">
+        <div class="gallery-item-info"><span>Serenity</span><p>Afternoon shade</p></div>
+      </div>
+    </div>
+    <div class="gallery-item" data-idx="1">
+      <img src="images/beach2.jpg" alt="Golden waters" loading="lazy">
+      <div class="gallery-item-overlay">
+        <div class="gallery-item-info"><span>Golden Hour</span><p>Liquid gold</p></div>
+      </div>
+    </div>
+    <div class="gallery-item" data-idx="2">
+      <img src="images/beach3.jpg" alt="Banca boat" loading="lazy">
+      <div class="gallery-item-overlay">
+        <div class="gallery-item-info"><span>Life at Sea</span><p>Traditional banca</p></div>
+      </div>
+    </div>
+    <div class="gallery-item" data-idx="3">
+      <img src="images/beach4.jpg" alt="Sunset silhouettes" loading="lazy">
+      <div class="gallery-item-overlay">
+        <div class="gallery-item-info"><span>Sunset</span><p>Friends &amp; sky</p></div>
+      </div>
+    </div>
+    <div class="gallery-item" data-idx="4">
+      <img src="images/beach5.jpg" alt="Harbor view" loading="lazy">
+      <div class="gallery-item-overlay">
+        <div class="gallery-item-info"><span>The Harbor</span><p>Busy waters</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Upload -->
+  <div class="gallery-upload reveal" id="uploadZone">
+    <span class="upload-icon">📸</span>
+    <h3>Share Your Lawis Memory</h3>
+    <p>Drag &amp; drop your photo here, or click to browse.<br>Your photo will appear in the community gallery.</p>
+    <button class="btn-primary" onclick="document.getElementById('uploadInput').click()">Choose Photo</button>
+    <input type="file" id="uploadInput" accept="image/*" multiple>
+  </div>
+
+  <!-- Community Photos -->
+  <div class="community-section">
+    <h3 class="reveal community-title">Community Memories</h3>
+    <div id="community-gallery">
+      <div class="community-empty">
+        Be the first to share a photo! ⛱️
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="section-center reveal">
+    <span class="section-label">Experience</span>
+    <h2 class="section-title">Everything you <em>love about the sea</em></h2>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card reveal">
+      <span class="feature-icon">🌊</span>
+      <h3>Crystal Waters</h3>
+      <p>Swim, snorkel, or simply float in the calm, crystal-clear waters of Lawis Bay — perfect for all ages and skill levels.</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">🌅</span>
+      <h3>Stunning Sunsets</h3>
+      <p>Every evening the sky transforms into a canvas of gold, orange, and crimson — a daily spectacle you will never forget.</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">⛵</span>
+      <h3>Banca Boat Rides</h3>
+      <p>Hop aboard a traditional Filipino outrigger banca and explore the coastline, fishing spots, and nearby coves at your own pace.</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">🍤</span>
+      <h3>Fresh Seafood</h3>
+      <p>Taste the ocean's bounty — from grilled fish to kinilaw — served fresh daily by local vendors right on the shore.</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">📷</span>
+      <h3>Photo Paradise</h3>
+      <p>Every corner of Lawis Beach is a perfect shot. Share your memories with our community gallery and discover others' perspectives.</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">🏕️</span>
+      <h3>Nipa Huts &amp; Rest</h3>
+      <p>Relax in the shade of traditional nipa huts right on the beach — listening to the waves, feeling the breeze, living slow.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-center reveal">
+    <span class="section-label">Visitor Stories</span>
+    <h2 class="section-title">What our <em>guests say</em></h2>
+  </div>
+  <div class="testimonials-wrap">
+    <div class="testimonial reveal">
+      <div class="stars">★★★★★</div>
+      <p>Lawis Beach completely took my breath away. The sunset was unlike anything I've seen — just four of us sitting on the shore watching the sky turn gold. It felt like the world slowed down for a moment.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">M</div>
+        <div class="author-info"><strong>Maria Santos</strong><span>Manila, PH · March 2026</span></div>
+      </div>
+    </div>
+    <div class="testimonial reveal">
+      <div class="stars">★★★★★</div>
+      <p>The banca ride out to the deeper waters was magical. The water is so clear you can see everything below. Lawis feels untouched, genuine, and the locals are incredibly warm and welcoming.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">J</div>
+        <div class="author-info"><strong>Juan dela Cruz</strong><span>Cebu, PH · February 2026</span></div>
+      </div>
+    </div>
+    <div class="testimonial reveal">
+      <div class="stars">★★★★☆</div>
+      <p>Relaxing in the nipa hut watching the tide come and go — with a fresh coconut in hand — is my idea of perfection. I'm already planning my next trip back to Lawis.</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">A</div>
+        <div class="author-info"><strong>Ana Reyes</strong><span>Davao, PH · January 2026</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="nav-logo footer-logo">Lawis Beach ⛱️</span>
+      <p>A pristine paradise on the Philippine coast, where every sunset is a masterpiece and every wave carries a story.</p>
+      <div class="footer-social">
+        <a class="social-icon" href="#">f</a>
+        <a class="social-icon" href="#">ig</a>
+        <a class="social-icon" href="#">yt</a>
+        <a class="social-icon" href="#">tw</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#features">Experience</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="#">Directions</a></li>
+        <li><a href="#">Accommodations</a></li>
+        <li><a href="#">Activities</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Community</h4>
+      <ul>
+        <li><a href="#" id="openAuth3">Sign Up</a></li>
+        <li><a href="#gallery">Upload Photos</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Volunteer</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Lawis Beach. Made with ❤️ and salty air.</span>
+    <span>Privacy · Terms · Cookies</span>
+  </div>
+</footer>
+
+</div><!-- /site -->
+
+<!-- AUTH MODAL -->
+<div class="modal-overlay" id="authModal">
+  <div class="modal">
+    <button class="modal-close" id="closeModal">✕</button>
+    <div class="modal-logo">
+      <span>⛱️</span>
+      <h2>Lawis Beach</h2>
+    </div>
+    <div class="modal-tabs">
+      <button class="tab-btn active" id="tabLogin">Sign In</button>
+      <button class="tab-btn" id="tabSignup">Create Account</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <div id="loginForm">
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="loginEmail" placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <div class="input-wrapper">
+          <input type="password" id="loginPass" placeholder="Your password">
+          <button class="input-toggle" onclick="togglePass('loginPass',this)">👁</button>
+        </div>
+      </div>
+      <button class="submit-btn" onclick="handleLogin()">Sign In to Paradise</button>
+      <div class="divider">or continue with</div>
+      <div class="social-btns">
+        <button class="social-btn">🔵 Google</button>
+        <button class="social-btn">📘 Facebook</button>
+      </div>
+      <p class="form-footer">Forgot password? <a href="#">Reset it</a></p>
+    </div>
+
+    <!-- SIGNUP FORM -->
+    <div id="signupForm" style="display:none">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="signupName" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="signupEmail" placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <div class="input-wrapper">
+          <input type="password" id="signupPass" placeholder="Create a strong password" oninput="updateStrength()">
+          <button class="input-toggle" onclick="togglePass('signupPass',this)">👁</button>
+        </div>
+        <div class="strength-bar"><div class="strength-fill" id="strengthFill"></div></div>
+        <div class="strength-label" id="strengthLabel">Enter a password</div>
+      </div>
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <div class="input-wrapper">
+          <input type="password" id="signupPass2" placeholder="Repeat your password" oninput="checkMatch()">
+          <button class="input-toggle" onclick="togglePass('signupPass2',this)">👁</button>
+        </div>
+        <div class="form-hint" id="matchHint">Passwords must match</div>
+      </div>
+      <button class="submit-btn" onclick="handleSignup()">Join Lawis Beach</button>
+      <div class="divider">or continue with</div>
+      <div class="social-btns">
+        <button class="social-btn">🔵 Google</button>
+        <button class="social-btn">📘 Facebook</button>
+      </div>
+      <p class="form-footer">By joining you agree to our <a href="#">Terms of Service</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1)">‹</button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)">›</button>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
